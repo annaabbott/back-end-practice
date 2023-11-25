@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 
 import * as RecipeAPI from "./recipe-api";
+import config from "./config";
 
 const app = express();
 
@@ -15,6 +16,6 @@ app.get("/api/recipe/search", async (req, res) => {
   return res.json(results);
 });
 
-app.listen(5000, () => {
-  console.log("Server running on localhost:5000");
+app.listen(config.port, () => {
+  console.log(`Server running on localhost:${config.port}`);
 });
