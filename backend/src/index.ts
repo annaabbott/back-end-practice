@@ -9,9 +9,12 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-app.get("/api/recipe/search", async (req, res) => {
+app.get("/api/recipes/search", async (req, res) => {
+  console.log("handler for /api/recipes/search")
   const searchTerm = req.query.searchTerm as string;
+  console.log("    searchTerm", searchTerm)
   const page = parseInt(req.query.page as string);
+  console.log("    page", page)
   const results = await RecipeAPI.searchRecipes(searchTerm, page);
   return res.json(results);
 });

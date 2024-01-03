@@ -1,6 +1,7 @@
 import config from "./config";
 
 export const searchRecipes = async (searchTerm: string, page: number) => {
+  console.log('searchRecipes handler')
   if (!config.apiKey) {
     throw new Error("API key not found");
   }
