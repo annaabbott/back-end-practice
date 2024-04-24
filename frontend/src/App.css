@@ -1,4 +1,4 @@
-.root {
+#root {
     font-family: Arial, Helvetica, sans-serif;
     max-width: 1280px;
     margin: 0 200px;
@@ -7,3 +7,35 @@
     /* color: green; */
 }
 
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 1;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    
+}
+
+.modalHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modalContent {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 4px;
+    max-width: 500px;
+}
