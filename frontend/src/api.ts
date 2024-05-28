@@ -14,7 +14,7 @@ export const searchRecipes = async (searchTerm: string, page: number) => {
 export async function fetchRecipeSummary (recipeId: string) {
   try {
     const baseUrl = `http://localhost:3000/api/recipes/${recipeId}/summary`;
-    const searchResponse = await fetch(baseUrl.toString());
+    const searchResponse = await fetch(baseUrl);
     if (!searchResponse.ok) {
       throw new Error(`HTTP error! Status: ${searchResponse.status}`);
     }

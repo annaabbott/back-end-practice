@@ -35,7 +35,7 @@ export const getRecipeSummary = async (recipeId: string) => {
     throw new Error("API key not found");
   }
   const url = new URL(
-    `https://api.spoonacular.com/recipes/{${recipeId}}/summary`
+    `https://api.spoonacular.com/recipes/${recipeId}/summary`
   );
   const params = {
     apiKey: config.apiKey
