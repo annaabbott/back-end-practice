@@ -10,7 +10,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Favorite Recipe {
+model FavoriteRecipes {
   id        Int @id @default(autoincrement())
   recipeId  Int @unique
 }
